@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Content Swap</title>
+</head>
+<body>
+  <h1 id="headline">Original Title</h1>
+  <p id="message">Use the buttons to change this text in the DOM.</p>
+  <button id="swap">Change Content</button>
+  <button id="reset">Reset</button>
+
+  <script>
+    const headline = document.getElementById("headline");
+    const message = document.getElementById("message");
+    const swapButton = document.getElementById("swap");
+    const resetButton = document.getElementById("reset");
+
+    swapButton.addEventListener("click", () => {
+      headline.textContent = "New Title";
+      message.textContent = "You pressed the button and updated the DOM text.";
+    });
+
+    resetButton.addEventListener("click", () => {
+      headline.textContent = "Original Title";
+      message.textContent = "Use the buttons to change this text in the DOM.";
+    });
+  </script>
+</body>
+</html>

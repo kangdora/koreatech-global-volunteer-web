@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM CSS Toggle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .highlight {
+      background-color: #222;
+      color: #f5f5f5;
+      padding: 16px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Toggle</h1>
+  <p id="box">Click the button to toggle the style.</p>
+  <button id="toggle">Toggle Style</button>
+
+  <script>
+    const box = document.getElementById("box");
+    const toggleButton = document.getElementById("toggle");
+
+    toggleButton.addEventListener("click", () => {
+      box.classList.toggle("highlight");
+    });
+  </script>
+</body>
+</html>
