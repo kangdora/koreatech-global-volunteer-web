@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM CSS Toggle Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Toggle Example</h1>
+    <p id="textBox">Click the button to toggle the style.</p>
+    <button onclick="changeColor()">Red / Blue</button>
+
+    <script>
+        const box = document.getElementById("textBox");
+        let isRed = true;
+        
+        function changeColor() {
+            box.style.color = isRed ? "red" : "blue";
+            isRed = !isRed;
+        }
+    </script>
+</body>
+</html>

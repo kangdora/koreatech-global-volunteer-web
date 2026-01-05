@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Counter Example</title>
+</head>
+<body>
+    <h1>Click Counter Example</h1>
+    <button onclick="handleClick()", style="background-color: #7180cb;border-color: #333661;border-radius: 5px;">cái nút</button>
+
+    <script>
+        let clickCount = 0;
+
+        function handleClick() {
+            clickCount = clickCount + 1;
+            console.log("Button clicked", clickCount, "times");
+        }
+    </script>
+</body>
+</html>

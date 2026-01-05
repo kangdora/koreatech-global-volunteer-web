@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Content Swap Example</title>
+</head>
+<body>
+    <h1 id="headline">Original Title</h1>
+    <p id="message">Use the buttons to change this text in the DOM.</p>
+    <button onclick="handleSwap()">Change Content</button>
+    <button onclick="handleReset()">Reset</button>
+
+    <script>
+        const headline = document.getElementById("headline");
+        const message = document.getElementById("message");
+
+        function handleSwap() {
+            headline.textContent = "New Title";
+            message.textContent = "You pressed the button and updated the DOM text.";
+        }
+
+        function handleReset() {
+            headline.textContent = "Original Title";
+            message.textContent = "Use the buttons to change this text in the DOM.";
+        }
+    </script>
+</body>
+</html>
