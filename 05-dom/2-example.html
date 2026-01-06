@@ -18,7 +18,11 @@
         let isRed = true;
         
         function changeColor() {
-            box.style.color = isRed ? "red" : "blue";
+            if (isRed) {
+                box.style.color = "red";
+            } else {
+                box.style.color = "blue";
+            }
             isRed = !isRed;
         }
     </script>
