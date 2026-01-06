@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Counter</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            text-align: center;
+            width: 100px;
+        }
+
+        h1 {
+            font-size: 100px;
+        }
+
+        button {
+            width: 110px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="count">0</h1>
+        <button onclick="countClick()">Click</button>
+    </div>
+    <script>
+        let count = 0;
+        let counter = document.getElementById("count");
+        
+        function countClick() {
+            count += 1;
+            
+            counter.textContent = count;
+
+            if (count % 2 == 0) {
+                counter.style.color = "blue"; // even
+            } else {
+                counter.style.color = "red";  // odd
+            }
+        }
+    </script>
+</body>
+</html>
